@@ -8,20 +8,58 @@
 body{
     display: flex;
 }
+
+/*LEFT BAR*/
 .left-bar{
-    width: 200px;
+    width: 250px;
     height: 90vh;
-    background-color: blue;
+    background-color: black;
 }
+
+.left-bar .logo{
+    width: 60%;
+    margin: 1em 1em 2em 1em;
+}
+
+.left-bar .logo-small{
+    width: 100%;
+    margin: 1em 1em 2em 1em;
+    display: none;
+}
+
+.selector{
+    background-color: black;
+    display: flex;
+    padding: .5em 1em;
+    align-items: center;
+    border-left: 5px solid black;
+}
+
+.home{
+    border-left: 5px solid yellowgreen;
+}
+
+.selector img{
+    width: 15%;
+    margin-right: .5em;
+}
+.selector span{
+    font-weight: bold;
+    color: white;
+}
+
+/*MAIN*/
 .main{
-    width: calc(100% - 200px);
+    width: calc(100% - 250px);
     height: 90vh;
     padding-top: 10vh;
     background-color: green;
     overflow-y: auto;
 }
+
+/*TOP BAR*/
 .top-bar{
-    width: calc(100% - 200px);
+    width: calc(100% - 250px);
     height: 10vh;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -35,9 +73,9 @@ body{
 
 .upgrade{
     color: white;
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 2em;
-    padding: .5em 1em;
+    padding: .5em 3em;
     text-decoration: none;
     top: 1em;
     right: 1em;
@@ -46,6 +84,7 @@ body{
     transform: scale(1.1);
 }
 
+/*BOTTOM BAR*/
 .bottom-bar{
     width: 100%;
     height: 10vh;
@@ -54,15 +93,37 @@ body{
     bottom: 0;
 }
 
+/*TELEFONO*/
 @media screen and (max-width:552px){
     .left-bar{
-        width: 50px;
+        width: 75px;
+        padding: 20px;
     }
+    .logo{
+        display: none;
+    }
+    .logo-small{
+        display: block;
+    }
+
+    .selector{
+        padding: 0;
+        border: 0;
+    }
+    .selector img{
+        width: 100%;
+        margin: .5em auto;
+    }
+    .selector span{
+        display: none;
+    }
+
     .main{
-        width: calc(100% - 50px);
+        width: calc(100% - 100px);
     }
+
    .top-bar{
-        width: calc(100% - 50px);
+        width: calc(100% - 100px);
    }
 
 }
