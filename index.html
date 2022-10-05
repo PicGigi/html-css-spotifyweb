@@ -11,29 +11,76 @@
 <body>
     <!--LEFT BAR-->
     <div class="left-bar">
-        <div class="logo"><img src="img/logo.svg"></div>
-        <div class="logo-small"><img src="img/logo-small.svg"></div>
-        <div class="selector home">
-            <img src="img/home.svg">
-            <span>Home</span>
-        </div>
-        <div class="selector search">
-            <img src="img/search.svg">
-            <span>Cerca</span>
-        </div>
-        <div class="selector library">
-            <img src="img/libreria.svg">
-            <span>La tua libreria</span>
-        </div>
+        <div class="left-bar-content">
+            <div class="logo"><img src="img/logo.svg"></div>
+            <div class="logo-small"><img src="img/logo-small.svg"></div>
 
+            <!--SELECTORS-->
+            <div class="selector home">
+                <div class="selected"></div>
+                <img src="img/home.svg">
+                <span>Home</span>
+            </div>
+            <div class="selector search hoverable">
+                <img src="img/search.svg">
+                <span>Cerca</span>
+            </div>
+            <div class="selector library hoverable">
+                <img src="img/libreria.svg">
+                <span>La tua libreria</span>
+            </div>
 
+            <!--PLAYLIST-->
+            <div class="playlist">
+                <div class="playlist-title"><span>PLAYLIST</span></div>
+                <div class="selector create hoverable">
+                    <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                    <span>Crea Playlist</span>
+                </div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+                <div class="selector playlist-name hoverable"> Nome Playlist</div>
+            </div>
+
+            <!--INSTALL & USER-->
+            <div class="left-bar-footer">
+                <div class="install hoverable">
+                    <i class="fa-regular fa-circle-down"></i>
+                    <span>Installa app</span>
+                </div>
+                <div class="user">
+                    <div class="user-img"></div>
+                    <span>Pinco Pallino</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--MAIN-->
     <div class="main">
+
+        <!--TOP BAR-->
         <div class="top-bar">
            <a href="#!" class="upgrade">EFFETTUA L'UPGRADE</a>
         </div>
+
+        <!--MUSIC SELECTORS-->
+        <div class="music-selectors">
+            <div class="listen-to">
+                <span class="hoverable">IN EVIDENZA</span>
+                <div class="selected"></div>
+            </div>
+            <div class="listen-to hoverable">PODCAST</div>
+            <div class="listen-to hoverable">CLASSIFICHE</div>
+            <div class="listen-to hoverable">GENERI E MOOD</div>
+            <div class="listen-to hoverable">NUOVE USCITE</div>
+            <div class="listen-to hoverable">SCOPRI</div>
+        </div>
+
     </div>
 
     <!--BOTTOM BAR-->
