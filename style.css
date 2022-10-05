@@ -5,6 +5,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/*DESKTOP (LRG)*/
 body{
     display: flex;
 }
@@ -37,6 +38,7 @@ body{
 }
 .hoverable:hover{
     opacity: 100%;
+    cursor: pointer;
 }
 /*SELECTORS*/
 .selector{
@@ -146,6 +148,7 @@ body{
     justify-content: flex-end;
     align-items: center;
     padding: 0 2em 0 2em;
+    z-index: 999;
 }
 
 .upgrade{
@@ -187,6 +190,93 @@ body{
     bottom: -30%;
 }
 
+/*RECENTLY PLAYED*/
+.recently-played{
+    width: 100%;
+    padding: 1em;
+    color: white;
+}
+
+.recently-played h1{
+    font-size: 1.5em;
+}
+.songs-list{
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.song{
+    flex: 1 1 calc((100% - 2%)/6);
+    padding: 1%;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.song img{
+    width: 100%;
+}
+
+.song-cover{
+    position: relative;
+}
+
+.play{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.play i{
+    font-size: 3em;
+}
+.song-cover:hover .play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-name{
+    font-weight: bold;
+    display: block;
+}
+.song-subtitle{
+    color: grey;
+    font-size: .9em
+}
+
+/*CREATED FOR*/
+.created-for{
+    width: 100%;
+    padding: 1em;
+    color: white;
+}
+.created-for h1{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+.created-for h2{
+    color: grey;
+    font-size: .9em;
+}
+.created-for .song{
+    flex: 0 0 calc((100% - 2%)/6);
+    padding: 1%;
+    text-align: center;
+    margin-bottom: .5em;
+    color: white;
+}
+
+/*POPULAR ARTISTS*/
+.round{
+    border-radius: 50%;
+}
+
 /*BOTTOM BAR*/
 .bottom-bar{
     width: 100%;
@@ -196,7 +286,27 @@ body{
     bottom: 0;
 }
 
-/*TELEFONO*/
+/*PORTATILE (MD)*/
+@media screen and (max-width:876px){
+    .song{
+        flex: 0 1 calc((100% - 2%)/4);
+    }
+    .created-for .song{
+        flex: 0 0 calc((100% - 2%)/4);
+}
+}
+
+/*TABLET (S)*/
+@media screen and (max-width:639px){
+    .song{
+        flex: 0 1 calc((100% - 2%)/2);
+    }
+    .created-for .song{
+        flex: 0 0 calc((100% - 2%)/2);
+}
+}
+
+/*TELEFONO (XS)*/
 @media screen and (max-width:552px){
     .left-bar{
         width: 75px;
@@ -237,5 +347,5 @@ body{
    .top-bar{
         width: calc(100% - 75px);
    }
-
 }
+
