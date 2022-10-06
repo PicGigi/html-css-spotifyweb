@@ -15,6 +15,7 @@ body{
     width: 250px;
     height: calc(100vh - 100px);
     background-color: black;
+    overflow: hidden;
 }
 
 .left-bar-content{
@@ -95,6 +96,7 @@ body{
     width: 100%;
     position: absolute;
     bottom: 1em;
+    background-color: black;
 }
 .install i{
     margin-right: .5em;
@@ -159,6 +161,7 @@ body{
 .top-bar{
     width: calc(100% - 250px);
     height: 10vh;
+    min-height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     color: white;
@@ -167,7 +170,7 @@ body{
     justify-content: flex-end;
     align-items: center;
     padding: 0 2em 0 2em;
-    z-index: 999;
+    z-index: 500;
 }
 
 .upgrade{
@@ -305,6 +308,7 @@ body{
     bottom: 0;
     display: flex;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .bottom-bar-section{
@@ -370,7 +374,7 @@ body{
     font-size: 2em;
 }
 .nb-top .fa-circle-play:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .nb-bottom{
@@ -450,6 +454,9 @@ body{
     .volume-info{
         width: 100%;
     }
+    .smaller-name{
+        font-size: .8em;
+    }
 }
 
 /*TABLET (S)*/
@@ -511,4 +518,3 @@ body{
     display: block;
    }
 }
-
